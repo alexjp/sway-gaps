@@ -33,15 +33,6 @@ def manage_new_close_window(self, e):
     monitor = workspace.ipc_data['output']
     y = len(workspace.nodes)
     
-    if workspace.name.startswith('trading'):
-        if y > 1:
-            make_window_normal(workspace)
-            return
-        if y == 1:
-            make_window_fullscreen(workspace)
-            return
-        return
-
     if y > 1:
         remove_gaps()
         return
